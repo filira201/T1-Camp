@@ -1,0 +1,154 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Исправить баг при входе",
+      "description": "Ошибка возникает при вводе неправильного пароля",
+      "category": "Bug",
+      "status": "To Do",
+      "priority": "High"
+    },
+    {
+      "id": "2",
+      "title": "Добавить поддержку темной темы",
+      "category": "Refactor",
+      "status": "In Progress",
+      "priority": "Medium",
+      "description": ""
+    },
+    {
+      "id": "3",
+      "title": "Обновить документацию по API",
+      "description": "Нужно описать новые эндпоинты",
+      "category": "Documentation",
+      "status": "Done",
+      "priority": "Low"
+    },
+    {
+      "id": "4",
+      "title": "Рефакторинг компонента Header",
+      "category": "Refactor",
+      "status": "In Progress",
+      "priority": "Medium"
+    },
+    {
+      "id": "5",
+      "title": "Покрыть тестами компонент TaskItem",
+      "description": "Добавить unit-тесты на отображение",
+      "category": "Test",
+      "status": "To Do",
+      "priority": "Low"
+    },
+    {
+      "id": "6",
+      "title": "Исправить отображение на мобильных устройствах",
+      "category": "Bug",
+      "status": "Done",
+      "priority": "High"
+    },
+    {
+      "id": "7",
+      "title": "Реализовать фильтрацию задач",
+      "description": "По категориям, приоритету и статусу",
+      "category": "Feature",
+      "status": "To Do",
+      "priority": "High"
+    },
+    {
+      "id": "8",
+      "title": "Добавить описание проекта в README",
+      "category": "Documentation",
+      "status": "Done",
+      "priority": "Medium"
+    },
+    {
+      "id": "9",
+      "title": "Рефакторинг страницы авторизации",
+      "description": "Упростить логику обработки ошибок",
+      "category": "Refactor",
+      "status": "In Progress",
+      "priority": "Medium"
+    },
+    {
+      "id": "10",
+      "title": "Проверить рендер задач при большом списке",
+      "category": "Test",
+      "status": "To Do",
+      "priority": "High"
+    },
+    {
+      "id": "11",
+      "title": "Исправить баг с неверной датой создания",
+      "description": "Дата всегда отображается как сегодняшняя",
+      "category": "Bug",
+      "status": "In Progress",
+      "priority": "Medium"
+    },
+    {
+      "id": "12",
+      "title": "Добавить уведомления при изменении задачи",
+      "category": "Feature",
+      "status": "Done",
+      "priority": "Low"
+    },
+    {
+      "id": "13",
+      "title": "Перевести интерфейс на русский язык",
+      "category": "Documentation",
+      "status": "To Do",
+      "priority": "High"
+    },
+    {
+      "id": "14",
+      "title": "Рефакторинг стора Redux",
+      "description": "Упростить структуру слайсов",
+      "category": "Refactor",
+      "status": "Done",
+      "priority": "Medium"
+    },
+    {
+      "id": "15",
+      "title": "Добавить e2e тесты",
+      "category": "Test",
+      "status": "In Progress",
+      "priority": "High"
+    },
+    {
+      "id": "16",
+      "title": "Исправить баг при загрузке аватара",
+      "category": "Bug",
+      "status": "To Do",
+      "priority": "Medium"
+    },
+    {
+      "id": "17",
+      "title": "Добавить поддержку drag-and-drop",
+      "description": "Перетаскивание задач между статусами",
+      "category": "Feature",
+      "status": "To Do",
+      "priority": "High"
+    },
+    {
+      "id": "18",
+      "title": "Добавить описание компонентов в Storybook",
+      "category": "Documentation",
+      "status": "Done",
+      "priority": "Low"
+    },
+    {
+      "id": "19",
+      "title": "Оптимизировать загрузку изображений",
+      "category": "Refactor",
+      "status": "In Progress",
+      "priority": "High"
+    },
+    {
+      "id": "20",
+      "title": "Покрыть тестами редукторы",
+      "description": "Особенно важно протестировать переключение темы",
+      "category": "Test",
+      "status": "Done",
+      "priority": "Medium"
+    }
+  ]
+}
