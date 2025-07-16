@@ -117,7 +117,7 @@ const TaskDetails = ({ task, id }: TaskDetailsProps) => {
       <ErrorMessage error={errors.root?.message} />
       <div className="w-full grid grid-cols-1 gap-4 mt-5 sm:grid-cols-2 sm:gap-6">
         <Button
-          className="text-base"
+          className="text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
           type="button"
           variant="flat"
           color="danger"
@@ -127,7 +127,7 @@ const TaskDetails = ({ task, id }: TaskDetailsProps) => {
           Отмена
         </Button>
         <Button
-          className="text-base"
+          className="text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
           type="submit"
           color="primary"
           fullWidth

@@ -65,7 +65,7 @@ const ModalDeleteTask = ({
                     variant="flat"
                     onPress={onClose}
                     fullWidth
-                    className="text-base"
+                    className="text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
                   >
                     Отмена
                   </Button>
@@ -73,7 +73,7 @@ const ModalDeleteTask = ({
                     color="danger"
                     variant="flat"
                     onPress={handleDeleteTask}
-                    className="text-base"
+                    className="text-base focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
                   >
                     Удалить
                   </Button>

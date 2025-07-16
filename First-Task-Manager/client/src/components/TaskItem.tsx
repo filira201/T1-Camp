@@ -40,7 +40,7 @@ const TaskItem = ({ task }: TaskItemProps) => {
               aria-label="Удалить задачу"
               color="danger"
               variant="flat"
-              className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-danger"
+              className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
               onPress={onOpen}
             >
               <RiDeleteBinLine />
