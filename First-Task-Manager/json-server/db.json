@@ -6,7 +6,8 @@
       "description": "Ошибка возникает при вводе неправильного пароля",
       "category": "Bug",
       "status": "To Do",
-      "priority": "High"
+      "priority": "High",
+      "createdAt": "2024-07-01T10:00:00Z"
     },
     {
       "id": "2",
@@ -14,7 +15,8 @@
       "category": "Refactor",
       "status": "In Progress",
       "priority": "Medium",
-      "description": ""
+      "description": "",
+      "createdAt": "2024-07-02T10:00:00Z"
     },
     {
       "id": "3",
@@ -22,14 +24,16 @@
       "description": "Нужно описать новые эндпоинты",
       "category": "Documentation",
       "status": "Done",
-      "priority": "Low"
+      "priority": "Low",
+      "createdAt": "2024-07-03T10:00:00Z"
     },
     {
       "id": "4",
       "title": "Рефакторинг компонента Header",
       "category": "Refactor",
       "status": "In Progress",
-      "priority": "Medium"
+      "priority": "Medium",
+      "createdAt": "2024-07-04T10:00:00Z"
     },
     {
       "id": "5",
@@ -37,14 +41,8 @@
       "description": "Добавить unit-тесты на отображение",
       "category": "Test",
       "status": "To Do",
-      "priority": "Low"
-    },
-    {
-      "id": "6",
-      "title": "Исправить отображение на мобильных устройствах",
-      "category": "Bug",
-      "status": "Done",
-      "priority": "High"
+      "priority": "Low",
+      "createdAt": "2024-07-05T10:00:00Z"
     },
     {
       "id": "7",
@@ -52,14 +50,16 @@
       "description": "По категориям, приоритету и статусу",
       "category": "Feature",
       "status": "To Do",
-      "priority": "High"
+      "priority": "High",
+      "createdAt": "2024-07-07T10:00:00Z"
     },
     {
       "id": "8",
       "title": "Добавить описание проекта в README",
       "category": "Documentation",
       "status": "Done",
-      "priority": "Medium"
+      "priority": "Medium",
+      "createdAt": "2024-07-08T10:00:00Z"
     },
     {
       "id": "9",
@@ -67,14 +67,16 @@
       "description": "Упростить логику обработки ошибок",
       "category": "Refactor",
       "status": "In Progress",
-      "priority": "Medium"
+      "priority": "Medium",
+      "createdAt": "2024-07-09T10:00:00Z"
     },
     {
       "id": "10",
       "title": "Проверить рендер задач при большом списке",
       "category": "Test",
       "status": "To Do",
-      "priority": "High"
+      "priority": "High",
+      "createdAt": "2024-07-10T10:00:00Z"
     },
     {
       "id": "11",
@@ -82,21 +84,24 @@
       "description": "Дата всегда отображается как сегодняшняя",
       "category": "Bug",
       "status": "In Progress",
-      "priority": "Medium"
+      "priority": "Medium",
+      "createdAt": "2024-07-11T10:00:00Z"
     },
     {
       "id": "12",
       "title": "Добавить уведомления при изменении задачи",
       "category": "Feature",
       "status": "Done",
-      "priority": "Low"
+      "priority": "Low",
+      "createdAt": "2024-07-12T10:00:00Z"
     },
     {
       "id": "13",
       "title": "Перевести интерфейс на русский язык",
       "category": "Documentation",
       "status": "To Do",
-      "priority": "High"
+      "priority": "High",
+      "createdAt": "2024-07-13T10:00:00Z"
     },
     {
       "id": "14",
@@ -104,43 +109,40 @@
       "description": "Упростить структуру слайсов",
       "category": "Refactor",
       "status": "Done",
-      "priority": "Medium"
+      "priority": "Medium",
+      "createdAt": "2024-07-14T10:00:00Z"
     },
     {
       "id": "15",
       "title": "Добавить e2e тесты",
       "category": "Test",
       "status": "In Progress",
-      "priority": "High"
+      "priority": "High",
+      "createdAt": "2024-07-15T10:00:00Z"
     },
     {
       "id": "16",
       "title": "Исправить баг при загрузке аватара",
       "category": "Bug",
       "status": "To Do",
-      "priority": "Medium"
-    },
-    {
-      "id": "17",
-      "title": "Добавить поддержку drag-and-drop",
-      "description": "Перетаскивание задач между статусами",
-      "category": "Feature",
-      "status": "To Do",
-      "priority": "High"
+      "priority": "Medium",
+      "createdAt": "2024-07-16T10:00:00Z"
     },
     {
       "id": "18",
       "title": "Добавить описание компонентов в Storybook",
       "category": "Documentation",
       "status": "Done",
-      "priority": "Low"
+      "priority": "Low",
+      "createdAt": "2024-07-18T10:00:00Z"
     },
     {
       "id": "19",
       "title": "Оптимизировать загрузку изображений",
       "category": "Refactor",
       "status": "In Progress",
-      "priority": "High"
+      "priority": "High",
+      "createdAt": "2024-07-19T10:00:00Z"
     },
     {
       "id": "20",
@@ -148,7 +150,8 @@
       "description": "Особенно важно протестировать переключение темы",
       "category": "Test",
       "status": "Done",
-      "priority": "Medium"
+      "priority": "Medium",
+      "createdAt": "2024-07-20T10:00:00Z"
     }
   ]
 }
