@@ -1,5 +1,5 @@
+import { Container, Header } from "@components";
 import { Outlet } from "react-router";
-import { Container, Header } from "../components";
 
 const AppLayout = () => {
   return (

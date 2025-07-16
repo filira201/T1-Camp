@@ -1,4 +1,3 @@
-import React from "react";
 import { Button } from "@heroui/react";
 import type { FetchBaseQueryError } from "@reduxjs/toolkit/query";
 import { useNavigate } from "react-router";
@@ -8,7 +7,7 @@ interface QueryErrorProps {
   onRetry?: () => void;
 }
 
-const QueryError: React.FC<QueryErrorProps> = ({ error, onRetry }) => {
+const QueryError = ({ error, onRetry }: QueryErrorProps) => {
   const navigate = useNavigate();
   let title = "Ошибка";
   let message = "Что-то пошло не так";

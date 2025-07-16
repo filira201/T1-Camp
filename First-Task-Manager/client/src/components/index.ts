@@ -8,3 +8,4 @@ export { default as ErrorMessage } from "./ErrorMessage";
 export { default as ErrorBoundary } from "./ErrorBoundary";
 export { default as QueryError } from "./QueryError";
 export { default as Loader } from "./Loader";
+export { default as ModalDeleteTask } from "./ModalDeleteTask";

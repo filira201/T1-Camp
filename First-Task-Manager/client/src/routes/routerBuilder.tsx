@@ -1,6 +1,6 @@
-import { ErrorBoundary } from "../components";
+import { TaskCreatePage, TaskDetailsPage, TasksPage } from "./pages";
+import { ErrorBoundary } from "@components";
 import AppLayout from "./AppLayout";
-import { TaskDetailsPage, TasksPage } from "./pages";
 
 const RouterBuilder = () => {
   const generalRoutes = [
@@ -11,6 +11,10 @@ const RouterBuilder = () => {
     {
       path: "/task/:id",
       element: <TaskDetailsPage />,
+    },
+    {
+      path: "/task/new",
+      element: <TaskCreatePage />,
     },
   ];
 

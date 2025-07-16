@@ -1,5 +1,4 @@
 import { addToast, Button, Form, Input, Textarea } from "@heroui/react";
-import type { FC } from "react";
 import { TASK_CATEGORY, TASK_PRIORITY, TASK_STATUS, type Task } from "../lib";
 import { Controller, useForm } from "react-hook-form";
 import SelectField from "./SelectField";
@@ -12,7 +11,7 @@ interface TaskDetailsProps {
   id: string | undefined;
 }
 
-const TaskDetails: FC<TaskDetailsProps> = ({ task, id }) => {
+const TaskDetails = ({ task, id }: TaskDetailsProps) => {
   const navigate = useNavigate();
   const [updateTask, { isLoading }] = useUpdateTaskMutation();
   const {
@@ -119,15 +118,6 @@ const TaskDetails: FC<TaskDetailsProps> = ({ task, id }) => {
       <div className="w-full grid grid-cols-1 gap-4 mt-5 sm:grid-cols-2 sm:gap-6">
         <Button
           className="text-base"
-          type="submit"
-          color="primary"
-          fullWidth
-          isLoading={isLoading}
-        >
-          Сохранить
-        </Button>
-        <Button
-          className="text-base"
           type="button"
           variant="flat"
           color="danger"
@@ -135,6 +125,15 @@ const TaskDetails: FC<TaskDetailsProps> = ({ task, id }) => {
           fullWidth
         >
           Отмена
+        </Button>
+        <Button
+          className="text-base"
+          type="submit"
+          color="primary"
+          fullWidth
+          isLoading={isLoading}
+        >
+          Сохранить
         </Button>
       </div>
     </Form>

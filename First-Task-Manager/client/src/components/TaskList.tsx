@@ -16,7 +16,7 @@ const TaskList = () => {
     return <QueryError error={error} onRetry={() => refetch()} />;
   }
   if (!tasks || !tasks.length) {
-    return <p>НИ ОДНОЙ ЗАДАЧИ</p>;
+    return <p>У вас пока-что нет задач</p>;
   }
 
   return (
