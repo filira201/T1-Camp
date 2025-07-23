@@ -11,8 +11,8 @@ import {
 import { FaRegMoon } from "react-icons/fa";
 import { LuSunMedium } from "react-icons/lu";
 import { useState } from "react";
-import { useAppDispatch, useAppSelector } from "../hooks";
-import { toggleTheme } from "../store/reducers/themeSlice";
+import { useAppDispatch, useAppSelector } from "@/hooks";
+import { toggleTheme } from "@/store";
 import { Link, NavLink } from "react-router";
 import classNames from "classnames";
 
@@ -66,12 +66,9 @@ const Header = () => {
             to="/task/new"
             //TODO: МБ додумать покрасивее классы, отдельные компоненты для NavBarLink
             className={({ isActive }) =>
-              classNames(
-                "font-medium transition-colors hover:text-blue-500",
-                {
-                  "text-blue-500": isActive,
-                }
-              )
+              classNames("font-medium transition-colors hover:text-blue-500", {
+                "text-blue-500": isActive,
+              })
             }
           >
             Создать задачу
@@ -95,12 +92,9 @@ const Header = () => {
             onClick={() => setIsMenuOpen(false)}
             //TODO: МБ додумать покрасивее классы
             className={({ isActive }) =>
-              classNames(
-                "font-medium transition-colors hover:text-blue-500",
-                {
-                  "text-blue-500": isActive,
-                }
-              )
+              classNames("font-medium transition-colors hover:text-blue-500", {
+                "text-blue-500": isActive,
+              })
             }
           >
             Создать задачу

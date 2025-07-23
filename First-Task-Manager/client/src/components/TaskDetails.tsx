@@ -1,8 +1,8 @@
 import { addToast } from "@heroui/react";
 import { useNavigate, useParams } from "react-router";
-import { useGetTaskByIdQuery, useUpdateTaskMutation } from "../api/taskApi";
-import { Loader, QueryError, TaskForm } from "@components";
-import type { Task } from "../lib";
+import { useGetTaskByIdQuery, useUpdateTaskMutation } from "@/api";
+import type { Task } from "@/lib";
+import { Loader, QueryError, TaskForm } from ".";
 
 const TaskDetails = () => {
   const { id } = useParams<{ id: string }>();

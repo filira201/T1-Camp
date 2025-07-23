@@ -7,7 +7,7 @@ import {
   ModalFooter,
   ModalHeader,
 } from "@heroui/react";
-import { useDeleteTaskMutation } from "../api/taskApi";
+import { useDeleteTaskMutation } from "@/api";
 
 interface ModalDeleteTaskProps {
   isOpen: boolean;

@@ -1,5 +1,5 @@
-import { TaskCreatePage, TaskDetailsPage, TasksPage } from "./pages";
-import { ErrorBoundary } from "@components";
+import { TaskCreatePage, TaskDetailsPage, TasksPage } from "@/routes/pages";
+import { ErrorBoundary } from "@/components";
 import AppLayout from "./AppLayout";
 
 const RouterBuilder = () => {

@@ -1,7 +1,7 @@
 import { Controller, useForm } from "react-hook-form";
-import { TASK_CATEGORY, TASK_PRIORITY, TASK_STATUS, type Task } from "../lib";
+import { TASK_CATEGORY, TASK_PRIORITY, TASK_STATUS, type Task } from "@/lib";
 import { Button, Form, Input, Textarea } from "@heroui/react";
-import { ErrorMessage, SelectField } from "@components";
+import { ErrorMessage, SelectField } from ".";
 
 interface TaskFormProps {
   initialValues?: Partial<Task>;

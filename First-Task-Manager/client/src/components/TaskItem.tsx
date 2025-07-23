@@ -13,11 +13,11 @@ import {
   priorityColor,
   statusColor,
   type Task,
-} from "../lib";
+} from "@/lib";
 import { useNavigate } from "react-router";
 import { CiEdit } from "react-icons/ci";
 import { RiDeleteBinLine } from "react-icons/ri";
-import { ModalDeleteTask } from "@components";
+import { ModalDeleteTask } from ".";
 
 type TaskItemProps = {
   task: Task;

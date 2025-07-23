@@ -1,4 +1,4 @@
-import { TaskList } from "../../components";
+import { TaskList } from "@/components";
 
 const TasksPage = () => {
   //TODO: Добавить поиск + пагинацию + фильтрацию по статусу

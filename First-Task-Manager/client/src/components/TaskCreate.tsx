@@ -1,9 +1,9 @@
 import { useNavigate } from "react-router";
-import { useCreateTaskMutation } from "../api/taskApi";
+import { useCreateTaskMutation } from "@/api";
 import { addToast } from "@heroui/react";
-import { TaskForm } from "@components";
+import TaskForm from "./TaskForm";
 
-import type { Task } from "../lib";
+import type { Task } from "@/lib";
 
 const TaskCreate = () => {
   const navigate = useNavigate();

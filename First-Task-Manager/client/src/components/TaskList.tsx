@@ -1,5 +1,5 @@
 import { Loader, QueryError, TaskItem } from ".";
-import { useGetAllTasksQuery } from "../api/taskApi";
+import { useGetAllTasksQuery } from "@/api";
 
 const TaskList = () => {
   const {
@@ -16,7 +16,11 @@ const TaskList = () => {
     return <QueryError error={error} onRetry={() => refetch()} />;
   }
   if (!tasks || !tasks.length) {
-    return <h2 className="text-xl font-medium. text-center">У вас пока что нет задач</h2>;
+    return (
+      <h2 className="text-xl font-medium text-center">
+        У вас пока что нет задач
+      </h2>
+    );
   }
 
   return (
