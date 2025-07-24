@@ -21,7 +21,6 @@ import {
 
 import { ModalDeleteTask } from ".";
 
-
 type TaskItemProps = {
   task: Task;
 };

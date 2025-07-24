@@ -1,7 +1,7 @@
 import { Button, Form, Input, Textarea } from "@heroui/react";
 import { Controller, useForm } from "react-hook-form";
 
-import { type Task,TASK_CATEGORY, TASK_PRIORITY, TASK_STATUS } from "@/lib";
+import { type Task, TASK_CATEGORY, TASK_PRIORITY, TASK_STATUS } from "@/lib";
 
 import { ErrorMessage, SelectField } from ".";
 
