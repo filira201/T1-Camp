@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+
 import type { ThemeState } from "../../lib";
 
 const KEY = "darkModeKey";

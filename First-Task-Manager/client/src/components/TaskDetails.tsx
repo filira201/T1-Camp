@@ -1,7 +1,9 @@
 import { addToast } from "@heroui/react";
 import { useNavigate, useParams } from "react-router";
+
 import { useGetTaskByIdQuery, useUpdateTaskMutation } from "@/api";
 import type { Task } from "@/lib";
+
 import { Loader, QueryError, TaskForm } from ".";
 
 const TaskDetails = () => {

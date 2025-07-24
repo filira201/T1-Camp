@@ -1,5 +1,6 @@
-import { Loader, QueryError, TaskItem } from ".";
 import { useGetAllTasksQuery } from "@/api";
+
+import { Loader, QueryError, TaskItem } from ".";
 
 const TaskList = () => {
   const {

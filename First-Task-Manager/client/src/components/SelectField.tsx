@@ -1,9 +1,9 @@
 import { Select, SelectItem } from "@heroui/react";
 import {
-  useController,
   type Control,
   type FieldValues,
   type Path,
+  useController,
 } from "react-hook-form";
 
 interface SelectFieldProps<T extends FieldValues> {

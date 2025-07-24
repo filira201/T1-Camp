@@ -1,7 +1,8 @@
 import { useEffect, useMemo } from "react";
-import { routerBuilder } from "@/routes";
 import { createBrowserRouter, RouterProvider } from "react-router";
+
 import { useAppSelector } from "@/hooks";
+import { routerBuilder } from "@/routes";
 
 export default function App() {
   const routes = useMemo(() => routerBuilder(), []);
