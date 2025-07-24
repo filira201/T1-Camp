@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 import type { Task } from "@/lib";
+import type { TaskData } from "@/lib";
 
 export const taskApi = createApi({
   reducerPath: "taskApi",
@@ -9,10 +10,14 @@ export const taskApi = createApi({
   }),
   tagTypes: ["Tasks"],
   endpoints: (builder) => ({
-    getAllTasks: builder.query<Task[], void>({
-      query: () => ({
+    getAllTasks: builder.query<TaskData, { page: number; perPage: number }>({
+      query: ({ page, perPage }) => ({
         url: "/tasks",
         method: "GET",
+        params: {
+          _page: page,
+          _per_page: perPage,
+        },
       }),
       providesTags: ["Tasks"],
     }),
