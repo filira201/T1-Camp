@@ -26,7 +26,7 @@ const SelectField = <T extends FieldValues>({
   const { field, fieldState } = useController({
     name,
     control,
-    rules: isRequired ? { required: `Поле ${label} Обязательно` } : undefined,
+    rules: isRequired ? { required: `Поле ${label} обязательно` } : undefined,
   });
 
   return (

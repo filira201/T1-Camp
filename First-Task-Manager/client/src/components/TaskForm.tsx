@@ -1,9 +1,9 @@
-import { Button, Form, Input, Textarea } from "@heroui/react";
-import { Controller, useForm } from "react-hook-form";
+import { Button, Form } from "@heroui/react";
+import { useForm } from "react-hook-form";
 
 import { type Task, TASK_CATEGORY, TASK_PRIORITY, TASK_STATUS } from "@/lib";
 
-import { ErrorMessage, SelectField } from ".";
+import { ErrorMessage, InputField, SelectField, TextareaField } from ".";
 
 interface TaskFormProps {
   initialValues?: Partial<Task>;
@@ -52,36 +52,18 @@ const TaskForm = ({
       className="mx-auto w-full flex flex-col gap-4 border-1.5 border-foreground-500 py-8 px-5 rounded-2xl sm:w-4/5 sm:max-w-3xl"
       onSubmit={handleSubmit(handleFormSubmit)}
     >
-      <Controller
-        control={control}
+      <InputField
         name="title"
-        render={({ field, fieldState }) => (
-          <Input
-            {...field}
-            ref={field.ref}
-            isRequired
-            errorMessage={fieldState.error?.message}
-            validationBehavior="aria"
-            isInvalid={fieldState.invalid}
-            label="Заголовок"
-            placeholder="Введите заголовок"
-          />
-        )}
-        rules={{ required: "Заголовок обязателен" }}
+        label="Заголовок"
+        placeholder="Введите заголовок"
+        control={control}
       />
 
-      <Controller
-        control={control}
+      <TextareaField
         name="description"
-        render={({ field }) => (
-          <Textarea
-            {...field}
-            ref={field.ref}
-            validationBehavior="aria"
-            label="Описание"
-            placeholder="Введите описание"
-          />
-        )}
+        label="Описание"
+        placeholder="Введите описание"
+        control={control}
       />
 
       <SelectField
