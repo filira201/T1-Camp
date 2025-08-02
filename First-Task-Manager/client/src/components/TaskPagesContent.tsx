@@ -1,12 +1,13 @@
-import { useGetAllTasksQuery } from "@api/taskApi";
-import { Loader, MyPagination, QueryError, TaskList } from "@components";
-import { ITEMS_PER_PAGE } from "@lib";
-import { useEffect } from "react";
-import { useSearchParams } from "react-router";
+import { useEffect } from 'react';
+import { useSearchParams } from 'react-router';
+
+import { useGetAllTasksQuery } from '@/api/taskApi';
+import { Loader, MyPagination, QueryError, TaskList } from '@/components';
+import { ITEMS_PER_PAGE } from '@/lib';
 
 const TaskPagesContent = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-  const currentPage = Number(searchParams.get("page") || "1");
+  const currentPage = Number(searchParams.get('page') || '1');
   const { data, isFetching, isLoading, error, refetch } = useGetAllTasksQuery({
     page: currentPage,
     perPage: ITEMS_PER_PAGE,
@@ -15,21 +16,28 @@ const TaskPagesContent = () => {
   useEffect(() => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }, [currentPage]);
 
-  if (isLoading || isFetching) return <Loader />;
+  if (isLoading || isFetching) {
+    return <Loader />;
+  }
+
   if (error) {
     return <QueryError error={error} onRetry={() => refetch()} />;
   }
+
   if (!data || !data.data || !data.data.length) {
     return <h2 className="text-xl font-medium text-center">У вас пока что нет задач</h2>;
   }
 
   const handlePageChange = (page: number) => {
-    if (page < 1 || page > data.pages) return;
-    searchParams.set("page", page.toString());
+    if (page < 1 || page > data.pages) {
+      return;
+    }
+
+    searchParams.set('page', page.toString());
     setSearchParams(searchParams);
   };
 
@@ -43,4 +51,5 @@ const TaskPagesContent = () => {
     </>
   );
 };
+
 export default TaskPagesContent;

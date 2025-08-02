@@ -1,4 +1,4 @@
-import type { TASK_CATEGORY, TASK_PRIORITY, TASK_STATUS } from "./constants";
+import type { TASK_CATEGORY, TASK_PRIORITY, TASK_STATUS } from './constants';
 
 export type TaskData = {
   data: Task[];

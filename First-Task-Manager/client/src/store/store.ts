@@ -1,8 +1,8 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { configureStore } from '@reduxjs/toolkit';
 
-import { taskApi } from "@/api";
+import themeSlice from './reducers/themeSlice';
 
-import themeSlice from "./reducers/themeSlice";
+import { taskApi } from '@/api';
 
 export const store = configureStore({
   reducer: {

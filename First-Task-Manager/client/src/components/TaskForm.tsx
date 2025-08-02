@@ -1,9 +1,9 @@
-import { Button, Form } from "@heroui/react";
-import { useForm } from "react-hook-form";
+import { Button, Form } from '@heroui/react';
+import { useForm } from 'react-hook-form';
 
-import { type Task, TASK_CATEGORY, TASK_PRIORITY, TASK_STATUS } from "@/lib";
+import { ErrorMessage, InputField, SelectField, TextareaField } from '.';
 
-import { ErrorMessage, InputField, SelectField, TextareaField } from ".";
+import { type Task, TASK_CATEGORY, TASK_PRIORITY, TASK_STATUS } from '@/lib';
 
 interface TaskFormProps {
   initialValues?: Partial<Task>;
@@ -19,7 +19,7 @@ const TaskForm = ({
   onSubmit,
   isLoading,
   submitText,
-  cancelText = "Отмена",
+  cancelText = 'Отмена',
   onCancel,
 }: TaskFormProps) => {
   const {
@@ -29,8 +29,8 @@ const TaskForm = ({
     formState: { errors },
   } = useForm<Task>({
     defaultValues: {
-      title: initialValues?.title ?? "",
-      description: initialValues?.description ?? "",
+      title: initialValues?.title ?? '',
+      description: initialValues?.description ?? '',
       category: initialValues?.category ?? TASK_CATEGORY[0],
       status: initialValues?.status ?? TASK_STATUS[0],
       priority: initialValues?.priority ?? TASK_PRIORITY[0],
@@ -41,8 +41,8 @@ const TaskForm = ({
     try {
       await onSubmit(data);
     } catch {
-      setError("root", {
-        message: "Что-то пошло не так, попробуйте снова",
+      setError('root', {
+        message: 'Что-то пошло не так, попробуйте снова',
       });
     }
   };

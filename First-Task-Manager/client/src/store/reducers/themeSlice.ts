@@ -1,15 +1,15 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-import type { ThemeState } from "../../lib";
+import type { ThemeState } from '../../lib';
 
-const KEY = "darkModeKey";
+const KEY = 'darkModeKey';
 
 const initialState: ThemeState = {
-  darkMode: JSON.parse(localStorage.getItem(KEY) ?? "false"),
+  darkMode: JSON.parse(localStorage.getItem(KEY) ?? 'false'),
 };
 
 const themeSlice = createSlice({
-  name: "theme",
+  name: 'theme',
   initialState,
 
   reducers: {

@@ -1,1 +1,1 @@
-export { default as routerBuilder } from "./routerBuilder";
+export { default as routerBuilder } from './routerBuilder';

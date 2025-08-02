@@ -1,4 +1,4 @@
-import { Pagination } from "@heroui/react";
+import { Pagination } from '@heroui/react';
 
 interface MyPaginationProps {
   currentPage: number;
@@ -21,4 +21,5 @@ const MyPagination = ({ currentPage, total, handlePageChange }: MyPaginationProp
     />
   );
 };
+
 export default MyPagination;

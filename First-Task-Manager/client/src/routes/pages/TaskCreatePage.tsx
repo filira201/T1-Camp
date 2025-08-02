@@ -1,4 +1,4 @@
-import { TaskCreate } from "@/components";
+import { TaskCreate } from '@/components';
 
 const TaskCreatePage = () => {
   return (
@@ -8,4 +8,5 @@ const TaskCreatePage = () => {
     </div>
   );
 };
+
 export default TaskCreatePage;

@@ -1,4 +1,4 @@
-import { Spinner } from "@heroui/react";
+import { Spinner } from '@heroui/react';
 
 const Loader = () => {
   return (
@@ -7,4 +7,5 @@ const Loader = () => {
     </div>
   );
 };
+
 export default Loader;

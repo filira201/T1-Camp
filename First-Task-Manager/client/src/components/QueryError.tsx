@@ -1,6 +1,6 @@
-import { Button } from "@heroui/react";
-import type { FetchBaseQueryError } from "@reduxjs/toolkit/query";
-import { useNavigate } from "react-router";
+import { Button } from '@heroui/react';
+import type { FetchBaseQueryError } from '@reduxjs/toolkit/query';
+import { useNavigate } from 'react-router';
 
 interface QueryErrorProps {
   error: FetchBaseQueryError | { message?: string } | undefined;
@@ -9,26 +9,29 @@ interface QueryErrorProps {
 
 const QueryError = ({ error, onRetry }: QueryErrorProps) => {
   const navigate = useNavigate();
-  let title = "Ошибка";
-  let message = "Что-то пошло не так";
+  let title = 'Ошибка';
+  let message = 'Что-то пошло не так';
 
-  if (!error) return null;
+  if (!error) {
+    return null;
+  }
 
-  if ("status" in error) {
+  if ('status' in error) {
     title = `Ошибка ${error.status}`;
-    if (typeof error.data === "string") {
+
+    if (typeof error.data === 'string') {
       message = error.data;
     } else if (
-      typeof error.data === "object" &&
+      typeof error.data === 'object' &&
       error.data !== null &&
-      "message" in error.data &&
-      typeof error.data.message === "string"
+      'message' in error.data &&
+      typeof error.data.message === 'string'
     ) {
       message = error.data.message;
     } else {
       message = JSON.stringify(error.data);
     }
-  } else if ("message" in error && error.message) {
+  } else if ('message' in error && error.message) {
     message = error.message;
   }
 
@@ -42,7 +45,7 @@ const QueryError = ({ error, onRetry }: QueryErrorProps) => {
             Попробовать снова
           </Button>
         )}
-        <Button onPress={() => navigate("/")} color="primary" fullWidth className="text-lg">
+        <Button onPress={() => navigate('/')} color="primary" fullWidth className="text-lg">
           Главная
         </Button>
       </div>

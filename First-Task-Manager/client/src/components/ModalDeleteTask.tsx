@@ -1,6 +1,6 @@
-import { addToast, Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader } from "@heroui/react";
+import { addToast, Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader } from '@heroui/react';
 
-import { useDeleteTaskMutation } from "@/api";
+import { useDeleteTaskMutation } from '@/api';
 
 interface ModalDeleteTaskProps {
   isOpen: boolean;
@@ -17,16 +17,16 @@ const ModalDeleteTask = ({ isOpen, onOpenChange, onClose, taskId }: ModalDeleteT
       await deleteTask(taskId).unwrap();
       onClose();
       addToast({
-        title: "Задача",
-        description: "Вы удалили задачу",
-        color: "success",
+        title: 'Задача',
+        description: 'Вы удалили задачу',
+        color: 'success',
       });
     } catch (error) {
       console.error(error);
       addToast({
-        title: "Задача",
-        description: "Произошла ошибка при удалении задачи",
-        color: "danger",
+        title: 'Задача',
+        description: 'Произошла ошибка при удалении задачи',
+        color: 'danger',
       });
     }
   };
@@ -71,4 +71,5 @@ const ModalDeleteTask = ({ isOpen, onOpenChange, onClose, taskId }: ModalDeleteT
     </>
   );
 };
+
 export default ModalDeleteTask;

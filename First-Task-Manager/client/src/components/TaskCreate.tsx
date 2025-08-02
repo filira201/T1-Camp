@@ -1,10 +1,10 @@
-import { addToast } from "@heroui/react";
-import { useNavigate } from "react-router";
+import { addToast } from '@heroui/react';
+import { useNavigate } from 'react-router';
 
-import { useCreateTaskMutation } from "@/api";
-import type { Task } from "@/lib";
+import TaskForm from './TaskForm';
 
-import TaskForm from "./TaskForm";
+import { useCreateTaskMutation } from '@/api';
+import type { Task } from '@/lib';
 
 const TaskCreate = () => {
   const navigate = useNavigate();
@@ -17,12 +17,13 @@ const TaskCreate = () => {
     navigate(-1);
 
     addToast({
-      title: "Задача",
-      description: "Вы создали новую задачу",
-      color: "success",
+      title: 'Задача',
+      description: 'Вы создали новую задачу',
+      color: 'success',
     });
   };
 
   return <TaskForm onSubmit={handleCreate} isLoading={isLoading} submitText="Создать" onCancel={() => navigate(-1)} />;
 };
+
 export default TaskCreate;

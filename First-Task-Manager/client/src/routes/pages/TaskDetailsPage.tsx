@@ -1,4 +1,4 @@
-import { TaskDetails } from "@/components";
+import { TaskDetails } from '@/components';
 
 const TaskDetailsPage = () => {
   return (
@@ -8,4 +8,5 @@ const TaskDetailsPage = () => {
     </div>
   );
 };
+
 export default TaskDetailsPage;

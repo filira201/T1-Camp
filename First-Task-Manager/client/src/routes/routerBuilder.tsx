@@ -1,20 +1,20 @@
-import { ErrorBoundary } from "@components";
-import { TaskCreatePage, TaskDetailsPage, TasksPage } from "@routes/pages";
+import AppLayout from './AppLayout';
 
-import AppLayout from "./AppLayout";
+import { ErrorBoundary } from '@/components';
+import { TaskCreatePage, TaskDetailsPage, TasksPage } from '@/routes/pages';
 
 const RouterBuilder = () => {
   const generalRoutes = [
     {
-      path: "/",
+      path: '/',
       element: <TasksPage />,
     },
     {
-      path: "/task/:id",
+      path: '/task/:id',
       element: <TaskDetailsPage />,
     },
     {
-      path: "/task/new",
+      path: '/task/new',
       element: <TaskCreatePage />,
     },
   ];

@@ -1,6 +1,6 @@
-import type { Task } from "@/lib";
+import { TaskItem } from '.';
 
-import { TaskItem } from ".";
+import type { Task } from '@/lib';
 
 interface TaskListProps {
   tasks: Task[];
@@ -17,4 +17,5 @@ const TaskList = ({ tasks }: TaskListProps) => {
     </>
   );
 };
+
 export default TaskList;

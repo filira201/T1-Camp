@@ -1,5 +1,5 @@
-import { Button, Card, CardBody, CardFooter, CardHeader } from "@heroui/react";
-import { isRouteErrorResponse, useNavigate, useRouteError } from "react-router";
+import { Button, Card, CardBody, CardFooter, CardHeader } from '@heroui/react';
+import { isRouteErrorResponse, useNavigate, useRouteError } from 'react-router';
 
 const ErrorBoundary = () => {
   const error = useRouteError();
@@ -18,7 +18,7 @@ const ErrorBoundary = () => {
             </>
           ) : (
             <p className="text-xl font-semibold text-center">
-              {error instanceof Error && "message" in error ? error.message : "Неизвестная ошибка"}
+              {error instanceof Error && 'message' in error ? error.message : 'Неизвестная ошибка'}
             </p>
           )}
         </CardHeader>
@@ -30,7 +30,7 @@ const ErrorBoundary = () => {
             <Button onPress={() => navigate(-1)} variant="flat" fullWidth className="text-lg">
               Назад
             </Button>
-            <Button onPress={() => navigate("/")} color="primary" fullWidth className="text-lg">
+            <Button onPress={() => navigate('/')} color="primary" fullWidth className="text-lg">
               Главная
             </Button>
           </div>
@@ -38,7 +38,7 @@ const ErrorBoundary = () => {
 
         <CardFooter className="px-6 pb-6 pt-4">
           <p className="text-center text-sm sm:text-base">
-            Если ошибка повторяется, пожалуйста, свяжитесь с нами по почте:{" "}
+            Если ошибка повторяется, пожалуйста, свяжитесь с нами по почте:{' '}
             <a href="mailto:example@mail.ru" className="text-blue-600 hover:underline">
               example@mail.ru
             </a>

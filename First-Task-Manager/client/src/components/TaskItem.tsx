@@ -1,11 +1,11 @@
-import { Button, Card, CardBody, CardFooter, CardHeader, Chip, useDisclosure } from "@heroui/react";
-import { CiEdit } from "react-icons/ci";
-import { RiDeleteBinLine } from "react-icons/ri";
-import { useNavigate } from "react-router";
+import { Button, Card, CardBody, CardFooter, CardHeader, Chip, useDisclosure } from '@heroui/react';
+import { CiEdit } from 'react-icons/ci';
+import { RiDeleteBinLine } from 'react-icons/ri';
+import { useNavigate } from 'react-router';
 
-import { categoryColor, formatToClientDate, priorityColor, statusColor, type Task } from "@/lib";
+import { ModalDeleteTask } from '.';
 
-import { ModalDeleteTask } from ".";
+import { categoryColor, formatToClientDate, priorityColor, statusColor, type Task } from '@/lib';
 
 type TaskItemProps = {
   task: Task;

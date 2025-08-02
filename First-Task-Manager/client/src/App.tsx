@@ -1,8 +1,8 @@
-import { useEffect, useMemo } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router";
+import { useEffect, useMemo } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router';
 
-import { useAppSelector } from "@/hooks";
-import { routerBuilder } from "@/routes";
+import { useAppSelector } from '@/hooks';
+import { routerBuilder } from '@/routes';
 
 export default function App() {
   const routes = useMemo(() => routerBuilder(), []);
@@ -10,9 +10,9 @@ export default function App() {
 
   useEffect(() => {
     if (darkMode) {
-      document.body.className = "dark text-foreground bg-background";
+      document.body.className = 'dark text-foreground bg-background';
     } else {
-      document.body.className = "light text-foreground bg-background";
+      document.body.className = 'light text-foreground bg-background';
     }
   }, [darkMode]);
 

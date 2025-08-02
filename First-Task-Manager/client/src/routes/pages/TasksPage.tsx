@@ -1,4 +1,4 @@
-import { TaskPagesContent } from "@/components";
+import { TaskPagesContent } from '@/components';
 
 const TasksPage = () => {
   //TODO: Добавить поиск + фильтрацию по статусу
@@ -9,4 +9,5 @@ const TasksPage = () => {
     </div>
   );
 };
+
 export default TasksPage;

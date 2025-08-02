@@ -7,14 +7,15 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
   Switch,
-} from "@heroui/react";
-import { useAppDispatch, useAppSelector } from "@hooks";
-import { toggleTheme } from "@store";
-import classNames from "classnames";
-import { useState } from "react";
-import { FaRegMoon } from "react-icons/fa";
-import { LuSunMedium } from "react-icons/lu";
-import { Link, NavLink } from "react-router";
+} from '@heroui/react';
+import classNames from 'classnames';
+import { useState } from 'react';
+import { FaRegMoon } from 'react-icons/fa';
+import { LuSunMedium } from 'react-icons/lu';
+import { Link, NavLink } from 'react-router';
+
+import { useAppDispatch, useAppSelector } from '@/hooks';
+import { toggleTheme } from '@/store';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
@@ -28,7 +29,7 @@ const Header = () => {
   return (
     <Navbar isBordered isBlurred={false} isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent className="xs:hidden" justify="start">
-        <NavbarMenuToggle aria-label={isMenuOpen ? "Закрыть меню" : "Открыть меню"} />
+        <NavbarMenuToggle aria-label={isMenuOpen ? 'Закрыть меню' : 'Открыть меню'} />
         <NavbarBrand>
           <Link
             onClick={() => setIsMenuOpen(false)}
@@ -59,8 +60,8 @@ const Header = () => {
             to="/task/new"
             //TODO: МБ додумать покрасивее классы, отдельные компоненты для NavBarLink
             className={({ isActive }) =>
-              classNames("font-medium transition-colors hover:text-blue-500", {
-                "text-blue-500": isActive,
+              classNames('font-medium transition-colors hover:text-blue-500', {
+                'text-blue-500': isActive,
               })
             }
           >
@@ -85,8 +86,8 @@ const Header = () => {
             onClick={() => setIsMenuOpen(false)}
             //TODO: МБ додумать покрасивее классы
             className={({ isActive }) =>
-              classNames("font-medium transition-colors hover:text-blue-500", {
-                "text-blue-500": isActive,
+              classNames('font-medium transition-colors hover:text-blue-500', {
+                'text-blue-500': isActive,
               })
             }
           >
@@ -97,4 +98,5 @@ const Header = () => {
     </Navbar>
   );
 };
+
 export default Header;
