@@ -38,22 +38,11 @@ const QueryError = ({ error, onRetry }: QueryErrorProps) => {
       <p className="text-red-600 mb-4 whitespace-pre-wrap">{message}</p>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         {onRetry && (
-          <Button
-            color="danger"
-            variant="flat"
-            onPress={onRetry}
-            fullWidth
-            className="text-lg"
-          >
+          <Button color="danger" variant="flat" onPress={onRetry} fullWidth className="text-lg">
             Попробовать снова
           </Button>
         )}
-        <Button
-          onPress={() => navigate("/")}
-          color="primary"
-          fullWidth
-          className="text-lg"
-        >
+        <Button onPress={() => navigate("/")} color="primary" fullWidth className="text-lg">
           Главная
         </Button>
       </div>

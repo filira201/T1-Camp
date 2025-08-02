@@ -23,13 +23,6 @@ const TaskCreate = () => {
     });
   };
 
-  return (
-    <TaskForm
-      onSubmit={handleCreate}
-      isLoading={isLoading}
-      submitText="Создать"
-      onCancel={() => navigate(-1)}
-    />
-  );
+  return <TaskForm onSubmit={handleCreate} isLoading={isLoading} submitText="Создать" onCancel={() => navigate(-1)} />;
 };
 export default TaskCreate;

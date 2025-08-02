@@ -1,10 +1,5 @@
 import { Input } from "@heroui/react";
-import {
-  type Control,
-  type FieldValues,
-  type Path,
-  useController,
-} from "react-hook-form";
+import { type Control, type FieldValues, type Path, useController } from "react-hook-form";
 
 interface InputFieldProps<T extends FieldValues> {
   name: Path<T>;

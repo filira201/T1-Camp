@@ -6,11 +6,7 @@ interface MyPaginationProps {
   handlePageChange: (page: number) => void;
 }
 
-const MyPagination = ({
-  currentPage,
-  total,
-  handlePageChange,
-}: MyPaginationProps) => {
+const MyPagination = ({ currentPage, total, handlePageChange }: MyPaginationProps) => {
   return (
     <Pagination
       className="cursor-pointer"

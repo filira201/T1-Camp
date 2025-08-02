@@ -24,11 +24,7 @@ const TaskPagesContent = () => {
     return <QueryError error={error} onRetry={() => refetch()} />;
   }
   if (!data || !data.data || !data.data.length) {
-    return (
-      <h2 className="text-xl font-medium text-center">
-        У вас пока что нет задач
-      </h2>
-    );
+    return <h2 className="text-xl font-medium text-center">У вас пока что нет задач</h2>;
   }
 
   const handlePageChange = (page: number) => {
@@ -42,11 +38,7 @@ const TaskPagesContent = () => {
       <TaskList tasks={data.data} />
 
       <div className="flex justify-center mt-6">
-        <MyPagination
-          currentPage={currentPage}
-          handlePageChange={handlePageChange}
-          total={data.pages}
-        />
+        <MyPagination currentPage={currentPage} handlePageChange={handlePageChange} total={data.pages} />
       </div>
     </>
   );

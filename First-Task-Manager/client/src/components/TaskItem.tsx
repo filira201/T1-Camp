@@ -1,23 +1,9 @@
-import {
-  Button,
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Chip,
-  useDisclosure,
-} from "@heroui/react";
+import { Button, Card, CardBody, CardFooter, CardHeader, Chip, useDisclosure } from "@heroui/react";
 import { CiEdit } from "react-icons/ci";
 import { RiDeleteBinLine } from "react-icons/ri";
 import { useNavigate } from "react-router";
 
-import {
-  categoryColor,
-  formatToClientDate,
-  priorityColor,
-  statusColor,
-  type Task,
-} from "@/lib";
+import { categoryColor, formatToClientDate, priorityColor, statusColor, type Task } from "@/lib";
 
 import { ModalDeleteTask } from ".";
 
@@ -52,10 +38,7 @@ const TaskItem = ({ task }: TaskItemProps) => {
 
         <CardBody>
           {task.description && (
-            <p
-              className="text-lg text-default-500 line-clamp-2"
-              title={task.description}
-            >
+            <p className="text-lg text-default-500 line-clamp-2" title={task.description}>
               {task.description}
             </p>
           )}
@@ -68,9 +51,7 @@ const TaskItem = ({ task }: TaskItemProps) => {
             <Chip color={priorityColor[task.priority]}>{task.priority}</Chip>
           </div>
 
-          <p className="font-base text-default-600 text-lg">
-            Создана: {formatToClientDate(task.createdAt)}
-          </p>
+          <p className="font-base text-default-600 text-lg">Создана: {formatToClientDate(task.createdAt)}</p>
 
           <Button
             onPress={() => navigate(`/task/${task.id}`)}
@@ -85,12 +66,7 @@ const TaskItem = ({ task }: TaskItemProps) => {
           </Button>
         </CardFooter>
       </Card>
-      <ModalDeleteTask
-        isOpen={isOpen}
-        onOpenChange={onOpenChange}
-        onClose={onClose}
-        taskId={task.id}
-      />
+      <ModalDeleteTask isOpen={isOpen} onOpenChange={onOpenChange} onClose={onClose} taskId={task.id} />
     </>
   );
 };

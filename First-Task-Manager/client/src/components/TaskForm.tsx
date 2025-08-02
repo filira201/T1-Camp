@@ -52,19 +52,9 @@ const TaskForm = ({
       className="mx-auto w-full flex flex-col gap-4 border-1.5 border-foreground-500 py-8 px-5 rounded-2xl sm:w-4/5 sm:max-w-3xl"
       onSubmit={handleSubmit(handleFormSubmit)}
     >
-      <InputField
-        name="title"
-        label="Заголовок"
-        placeholder="Введите заголовок"
-        control={control}
-      />
+      <InputField name="title" label="Заголовок" placeholder="Введите заголовок" control={control} />
 
-      <TextareaField
-        name="description"
-        label="Описание"
-        placeholder="Введите описание"
-        control={control}
-      />
+      <TextareaField name="description" label="Описание" placeholder="Введите описание" control={control} />
 
       <SelectField
         control={control}
@@ -73,13 +63,7 @@ const TaskForm = ({
         description="Выберите категорию"
         options={TASK_CATEGORY}
       />
-      <SelectField
-        control={control}
-        name="status"
-        label="Статус"
-        description="Выберите статус"
-        options={TASK_STATUS}
-      />
+      <SelectField control={control} name="status" label="Статус" description="Выберите статус" options={TASK_STATUS} />
       <SelectField
         control={control}
         name="priority"
@@ -91,13 +75,7 @@ const TaskForm = ({
       <ErrorMessage error={errors.root?.message} />
 
       <div className="w-full grid grid-cols-1 gap-4 mt-5 sm:grid-cols-2 sm:gap-6">
-        <Button
-          type="button"
-          variant="flat"
-          color="danger"
-          onPress={onCancel}
-          fullWidth
-        >
+        <Button type="button" variant="flat" color="danger" onPress={onCancel} fullWidth>
           {cancelText}
         </Button>
         <Button type="submit" color="primary" fullWidth isLoading={isLoading}>

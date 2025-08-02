@@ -1,12 +1,4 @@
-import {
-  addToast,
-  Button,
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-} from "@heroui/react";
+import { addToast, Button, Modal, ModalBody, ModalContent, ModalFooter, ModalHeader } from "@heroui/react";
 
 import { useDeleteTaskMutation } from "@/api";
 
@@ -17,12 +9,7 @@ interface ModalDeleteTaskProps {
   taskId: string;
 }
 
-const ModalDeleteTask = ({
-  isOpen,
-  onOpenChange,
-  onClose,
-  taskId,
-}: ModalDeleteTaskProps) => {
+const ModalDeleteTask = ({ isOpen, onOpenChange, onClose, taskId }: ModalDeleteTaskProps) => {
   const [deleteTask] = useDeleteTaskMutation();
 
   const handleDeleteTask = async () => {
@@ -54,10 +41,7 @@ const ModalDeleteTask = ({
                 <h3 className="text-xl font-medium">Удалить задачу?</h3>
               </ModalHeader>
               <ModalBody>
-                <p>
-                  Вы уверены, что хотите удалить эту задачу? Это действие
-                  необратимо.
-                </p>
+                <p>Вы уверены, что хотите удалить эту задачу? Это действие необратимо.</p>
               </ModalBody>
               <ModalFooter>
                 <div className="w-full grid grid-cols-1 gap-4 mt-5 sm:grid-cols-2 sm:gap-6">

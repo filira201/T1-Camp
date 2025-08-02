@@ -26,16 +26,9 @@ const Header = () => {
   };
 
   return (
-    <Navbar
-      isBordered
-      isBlurred={false}
-      isMenuOpen={isMenuOpen}
-      onMenuOpenChange={setIsMenuOpen}
-    >
+    <Navbar isBordered isBlurred={false} isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent className="xs:hidden" justify="start">
-        <NavbarMenuToggle
-          aria-label={isMenuOpen ? "Закрыть меню" : "Открыть меню"}
-        />
+        <NavbarMenuToggle aria-label={isMenuOpen ? "Закрыть меню" : "Открыть меню"} />
         <NavbarBrand>
           <Link
             onClick={() => setIsMenuOpen(false)}

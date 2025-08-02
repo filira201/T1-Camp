@@ -9,8 +9,7 @@ export const store = configureStore({
     theme: themeSlice,
     [taskApi.reducerPath]: taskApi.reducer,
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(taskApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(taskApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

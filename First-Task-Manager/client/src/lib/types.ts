@@ -4,13 +4,7 @@ export type ThemeState = {
   darkMode: boolean;
 };
 
-type ChipColors =
-  | "default"
-  | "primary"
-  | "secondary"
-  | "success"
-  | "warning"
-  | "danger";
+type ChipColors = "default" | "primary" | "secondary" | "success" | "warning" | "danger";
 
 export const statusColor: Record<TaskStatus, ChipColors> = {
   "To Do": "primary",

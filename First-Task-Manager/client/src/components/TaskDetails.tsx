@@ -10,13 +10,7 @@ const TaskDetails = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [updateTask, { isLoading: isUpdating }] = useUpdateTaskMutation();
-  const {
-    data: task,
-    isLoading,
-    isFetching,
-    error,
-    refetch,
-  } = useGetTaskByIdQuery(id ?? "");
+  const { data: task, isLoading, isFetching, error, refetch } = useGetTaskByIdQuery(id ?? "");
 
   if (isLoading || isFetching) {
     return <Loader />;
