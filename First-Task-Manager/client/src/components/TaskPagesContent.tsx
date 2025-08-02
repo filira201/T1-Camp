@@ -1,10 +1,8 @@
+import { useGetAllTasksQuery } from "@api/taskApi";
+import { Loader, MyPagination, QueryError, TaskList } from "@components";
+import { ITEMS_PER_PAGE } from "@lib";
 import { useEffect } from "react";
 import { useSearchParams } from "react-router";
-
-import { useGetAllTasksQuery } from "@/api";
-import { ITEMS_PER_PAGE } from "@/lib";
-
-import { Loader, MyPagination, QueryError, TaskList } from ".";
 
 const TaskPagesContent = () => {
   const [searchParams, setSearchParams] = useSearchParams();
