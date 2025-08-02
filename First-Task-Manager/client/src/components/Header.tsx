@@ -8,14 +8,13 @@ import {
   NavbarMenuToggle,
   Switch,
 } from "@heroui/react";
+import { useAppDispatch, useAppSelector } from "@hooks";
+import { toggleTheme } from "@store";
 import classNames from "classnames";
 import { useState } from "react";
 import { FaRegMoon } from "react-icons/fa";
 import { LuSunMedium } from "react-icons/lu";
 import { Link, NavLink } from "react-router";
-
-import { useAppDispatch, useAppSelector } from "@/hooks";
-import { toggleTheme } from "@/store";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
