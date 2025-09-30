@@ -34,11 +34,12 @@ const SelectField = <T extends FieldValues>({
       isInvalid={fieldState.invalid}
       errorMessage={fieldState.error?.message}
       validationBehavior="aria"
-      selectedKeys={[field.value]}
+      selectedKeys={field.value ? [field.value] : []}
       onBlur={field.onBlur}
       onChange={field.onChange}
       onSelectionChange={(keys) => {
-        field.onChange(Array.from(keys)[0]);
+        const next = Array.from(keys)[0] ?? '';
+        field.onChange(next);
       }}
     >
       {options.map((option) => (

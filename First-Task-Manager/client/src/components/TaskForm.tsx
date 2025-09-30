@@ -31,9 +31,9 @@ const TaskForm = ({
     defaultValues: {
       title: initialValues?.title ?? '',
       description: initialValues?.description ?? '',
-      category: initialValues?.category ?? TASK_CATEGORY[0],
-      status: initialValues?.status ?? TASK_STATUS[0],
-      priority: initialValues?.priority ?? TASK_PRIORITY[0],
+      category: initialValues?.category ?? ('' as unknown as (typeof TASK_CATEGORY)[number]),
+      status: initialValues?.status ?? ('' as unknown as (typeof TASK_STATUS)[number]),
+      priority: initialValues?.priority ?? ('' as unknown as (typeof TASK_PRIORITY)[number]),
     },
   });
 
