@@ -4,8 +4,16 @@ import type { ThemeState } from '../../lib';
 
 const KEY = 'darkModeKey';
 
+const getInitialTheme = (): boolean => {
+  try {
+    return JSON.parse(localStorage.getItem(KEY) ?? 'false');
+  } catch {
+    return false;
+  }
+};
+
 const initialState: ThemeState = {
-  darkMode: JSON.parse(localStorage.getItem(KEY) ?? 'false'),
+  darkMode: getInitialTheme(),
 };
 
 const themeSlice = createSlice({
@@ -15,10 +23,12 @@ const themeSlice = createSlice({
   reducers: {
     toggleTheme: (state) => {
       state.darkMode = !state.darkMode;
-      localStorage.setItem(KEY, JSON.stringify(state.darkMode));
+    },
+    setTheme: (state, action) => {
+      state.darkMode = action.payload;
     },
   },
 });
 
-export const { toggleTheme } = themeSlice.actions;
+export const { toggleTheme, setTheme } = themeSlice.actions;
 export default themeSlice.reducer;
